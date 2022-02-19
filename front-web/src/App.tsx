@@ -1,8 +1,9 @@
 import './assets/styles/custom.scss';
 import './App.css';
+import Navbar from 'components/navbar';
 
 function App() {
-  return <h1>DSSales - Pie Chart</h1>;
+  return <Navbar />;
 }
 
 export default App;

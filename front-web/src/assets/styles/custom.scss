@@ -1,16 +1,8 @@
-@function theme-color($key: 'primary') {
-  @return map-get($theme-colors, $key);
-}
-
 $theme-colors: (
-  'font-primary': #334ac3,
-  'font-secondary': #8d8d8d,
-  'background-body': #d9dbe4,
-  'background-card': #ffffff,
-  'boder-primary': #8d8d8d
+  'primary': #334ac3
 );
 
-$body-bg: theme-color('background-body');
-$body-color: theme-color('font-primary');
+$body-bg: #d9dbe4;
+$body-color: #334ac3;
 
 @import '~bootstrap/scss/bootstrap.scss';

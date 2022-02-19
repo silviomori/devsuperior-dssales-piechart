@@ -1,0 +1,11 @@
+.navbar-container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.navbar-container h1 {
+  padding-left: 40px;
+  font-size: 24px;
+}
