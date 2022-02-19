@@ -18,3 +18,15 @@ h6 {
 body {
   margin: 0;
 }
+
+.base-card {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+  .base-card {
+    margin-top: 40px;
+  }
+}
