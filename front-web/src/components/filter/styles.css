@@ -4,14 +4,36 @@
   align-items: center;
 }
 
-.filter-input {
+.filter-select {
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #8d8d8d;
+}
+
+.filter-select__control {
   height: 50px;
   width: 270px;
-  margin-left: 15px;
-  padding-left: 12px;
-  color: #8d8d8d;
-  border: 1px solid #8d8d8d;
-  border-radius: 4px;
+  background-color: unset;
+  border: unset !important;
+}
+
+.filter-select__control:focus {
+  box-shadow: none;
+  background-color: unset;
+}
+
+.filter-select__placeholder {
+  color: #9e9e9e !important;
+  font-style: italic;
+}
+
+.filter-select__indicator svg {
+  height: 28px;
+  width: 28px;
+}
+
+.filter-select__indicator-separator {
+  display: none;
 }
 
 @media (min-width: 576px) {
