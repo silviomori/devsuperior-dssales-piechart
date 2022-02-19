@@ -1,0 +1,9 @@
+.pie-chart-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pie-chart-container img {
+  height: 100%;
+  width: auto;
+}

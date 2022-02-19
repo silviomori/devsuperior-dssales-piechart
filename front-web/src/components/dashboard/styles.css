@@ -1,0 +1,27 @@
+.dashboard-container {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dashboard-total-sales {
+  margin: 40px 15px;
+}
+
+@media (min-width: 576px) {
+  .dashboard-total-sales {
+    margin: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dashboard-pie-chart {
+    margin: 60px;
+  }
+}
