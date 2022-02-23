@@ -14,7 +14,7 @@ function Dashboard({ filterData }: Props) {
         <TotalSales store={filterData?.store} />
       </div>
       <div className="dashboard-pie-chart">
-        <PieChart />
+        <PieChart store={filterData?.store} />
       </div>
     </div>
   );
