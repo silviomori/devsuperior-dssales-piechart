@@ -5,14 +5,15 @@ import { requestBackend } from 'util/requests';
 import { AxiosRequestConfig } from 'axios';
 import { Controller, useForm } from 'react-hook-form';
 import Select from 'react-select';
+import { FilterData } from 'types/filter-data';
 
-type FilterData = {
-  store: Store;
+type Props = {
+  onFilterChange?: (filterData: FilterData) => void;
 };
 
-function Filter() {
+function Filter({ onFilterChange }: Props) {
   const [stores, setStores] = useState<Store[]>([]);
-  const { control } = useForm<FilterData>();
+  const { control, setValue, getValues } = useForm<FilterData>();
 
   useEffect(() => {
     const config: AxiosRequestConfig = {
@@ -24,6 +25,14 @@ function Filter() {
       setStores(response.data);
     });
   }, []);
+
+  const handleChangeStore = (value: Store) => {
+    setValue('store', value);
+    const obj: FilterData = {
+      store: getValues('store')
+    };
+    onFilterChange?.(obj);
+  };
 
   return (
     <div className="base-card filter-container">
@@ -38,11 +47,12 @@ function Filter() {
               classNamePrefix="filter-select"
               options={stores}
               isClearable
+              onChange={(value) => handleChangeStore(value as Store)}
               getOptionLabel={(store: Store) => store.name}
               getOptionValue={(store: Store) => String(store.id)}
             />
           )}
-        />{' '}
+        />
       </div>
     </div>
   );
