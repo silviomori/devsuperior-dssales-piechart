@@ -37,7 +37,7 @@
 }
 
 @media (min-width: 576px) {
-  .filter-input {
+  .filter-select {
     margin-left: 40px;
   }
 }

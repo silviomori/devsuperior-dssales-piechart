@@ -21,7 +21,6 @@ function Filter({ onFilterChange }: Props) {
       url: '/stores'
     };
     requestBackend(config).then((response) => {
-      console.log(response.data);
       setStores(response.data);
     });
   }, []);
